@@ -1,0 +1,372 @@
+////////////////////////////////////////
+// LOGO
+.logo {
+    
+}
+
+
+////////////////////////////////////////
+// SEARCH
+.search {
+    
+
+    &__input {
+        
+        
+
+        &:focus {
+            
+        }
+
+        &::-webkit-input-placeholder {
+            
+        }
+    }
+
+    &__input:focus + &__button {
+        
+    }
+
+    &__button {
+        
+
+        &:focus {
+            outline: none;
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+
+    &__icon {
+        
+    }
+}
+
+
+////////////////////////////////////////
+// USER NAVIGATION
+.user-nav {
+    
+
+    & > * {
+        
+    }
+
+    & > *:hover {
+        background-color: var(--color-grey-light-2);
+    }
+
+    &__icon-box {
+        
+    }
+
+    &__icon {
+        
+    }
+
+    &__notification {
+        
+    }
+
+    &__user-photo {
+        
+    }
+
+}
+
+
+////////////////////////////////////////
+// SIDE NAVIGATION
+.side-nav {
+    
+
+    &__item {
+        
+
+        &:not(:last-child) {
+           
+
+            @media only screen and (max-width: $bp-medium) {
+                
+            }
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            
+        }
+    }
+
+    &__item::before {
+        
+        transition: transform .2s,
+                    width .4s cubic-bezier(1,0,0,1) .2s,
+                    background-color .1s;
+    }
+
+    &__item:hover::before,
+    &__item--active::before {
+        
+    }
+
+    &__item:active::before {
+        
+    }
+
+    &__link:link,
+    &__link:visited {
+        color: var(--color-grey-light-1);
+     
+    }
+
+    &__icon {
+        
+    }
+}
+
+
+////////////////////////////////////////
+// LEGAL TEXT
+.legal {
+    
+}
+
+
+////////////////////////////////////////
+// GALLERY
+.gallery {
+    
+
+    &__photo {
+        
+    }
+}
+
+
+////////////////////////////////////////
+// HOTEL OVERVIEW
+.overview {
+    
+
+    &__heading {
+        
+    }
+
+    &__stars {
+        
+    }
+
+    &__icon-star,
+    &__icon-location {
+        
+    }
+
+    &__location {
+        
+    }
+
+    &__icon-location {
+        
+    }
+
+    &__rating {
+        
+    }
+
+    &__rating-average {
+        
+    }
+
+    &__rating-count {
+        
+    }
+}
+
+
+
+////////////////////////////////////////
+// BUTTON INLINE
+.btn-inline {
+    transition: all .2s;
+
+    & span {
+        
+    }
+
+    &:hover {
+        
+
+        span {
+            
+        }
+    }
+
+    &:focus {
+        
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+        box-shadow: none;
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 1rem 4rem rgba(0,0,0,.25);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: none;
+    }
+}
+
+////////////////////////////////////////
+// PARAGRAPH
+.paragraph:not(:last-of-type) {
+    
+}
+
+
+
+////////////////////////////////////////
+// LIST
+.list {
+    list-style: none;
+    
+
+    &__item {
+        
+    }
+
+    &__item::before {
+        
+        
+
+        // Older browsers
+        
+
+        //Newer browsers - masks
+        @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+            
+        }
+        
+    }
+}
+
+
+
+////////////////////////////////////////
+// RECOMMEND
+.recommend {
+    
+
+    display: flex;
+    
+
+    &__count {
+        
+    }
+
+    &__friends {
+        
+    }
+
+    &__photo {
+        
+
+        &:not(:last-child) {
+           
+        }
+    }
+}
+
+
+////////////////////////////////////////
+// REVIEWS
+.review {
+
+
+    &__text {
+        
+    }
+
+    &__user {
+        
+    }
+
+    &__photo {
+        
+    }
+
+    &__user-box {
+        
+    }
+
+    &__user-name {
+        
+    }
+
+    &__user-date {
+        
+    }
+
+    &__rating {
+        
+    }
+
+    &::before {
+        
+    }
+}
+
+
+////////////////////////////////////////
+// CALL TO ACTION
+.cta {
+    
+
+    
+
+    &__book-now {
+        
+    }
+}
+
+
+////////////////////////////////////////
+// CALL TO ACTION
+.btn {
+    
+
+    & > * {
+        
+    }
+
+    &__visible {
+        
+    }
+
+    &__invisible {
+        
+    }
+
+    &:hover {
+        
+    }
+
+    &:hover &__visible {
+        
+    }
+
+    &:hover &__invisible {
+        
+    }
+
+    &:focus {
+        
+    }
+}

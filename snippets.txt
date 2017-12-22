@@ -1,0 +1,7 @@
+main.css should be in index.html link tag
+
+run npm install and git init
+
+
+
+
