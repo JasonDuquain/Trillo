@@ -14,6 +14,11 @@
     align-items: center;
     justify-content: center;
     
+    @include breakpoint(max-width $bp-smallest) {
+        order: 1;
+        flex: 0 0 100%;
+        background-color: var(--color-grey-light-2);
+    }
 
     &__input {
         transition: all 200ms ease-out;
@@ -124,14 +129,26 @@
     font-size: 1.4rem;
     list-style-type: none;
     margin-top: 3.5rem;
+    
+    @include breakpoint(max-width $bp-medium) {
+        display: flex;
+        margin: 0;
+    }
 
     &__item {
        position: relative;
 
         &:not(:last-child) {
-           margin-bottom: .5rem;
-
+            margin-bottom: .5rem;
             
+            @include breakpoint(max-width $bp-medium) {
+                margin-bottom: 0;
+            }
+            
+        }
+        
+        @include breakpoint(max-width $bp-medium) {
+            flex: 1;
         }
 
         
@@ -166,13 +183,24 @@
          color: var(--color-grey-light-1);
          text-decoration: none;
          text-transform: uppercase;
-        display: block;
-        padding: 1.5rem 3rem;
-        position: relative;
-        z-index: 10;
+         display: block;
+         padding: 1.5rem 3rem;
+         position: relative;
+         z-index: 10;
         
-        display: flex;
-        align-items: center;
+         display: flex;
+         align-items: center;
+        
+        @include breakpoint(max-width $bp-medium) {
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        @include breakpoint(max-width $bp-small) {
+            flex-direction: column;
+            padding: 1.5rem;
+        }
+        
     }
 
     &__icon {
@@ -181,6 +209,14 @@
         margin-right: 2rem;
         fill: currentColor;
         pointer-events: none; // temp fix for js click event
+        
+        @include breakpoint(max-width $bp-small) {
+            margin-right: 0;
+            margin-bottom: .7rem;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        
     }
     
     span {
@@ -195,6 +231,10 @@
     text-align: center;
     padding: 2.5rem;
     color: var(--color-grey-light-4);
+    
+    @include breakpoint(max-width $bp-medium) {
+        display: none;
+    }
 }
 
 ////////////////////////////////////////
@@ -216,11 +256,17 @@
     border-bottom: var(--line);
 
     &__heading {
-       font-size: 2.25rem;
+        font-size: 2.25rem;
         font-weight: 300;
         text-transform: uppercase;
         letter-spacing: 1px;
         padding: 1.5rem 3rem;
+        
+        @include breakpoint(max-width $bp-small) {
+            font-size: 1.8rem;
+            padding: 1.25rem 2rem;
+        }
+        
     }
 
     &__stars {
@@ -259,17 +305,32 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        
+        @include breakpoint(max-width $bp-small) {
+            padding: 0 1.5rem;
+        }
+        
     }
 
     &__rating-average {
         font-size: 2.25rem;
         font-weight: 300;
         margin-bottom: -3px;
+        
+        @include breakpoint(max-width $bp-small) {
+            font-size: 1.8rem;
+        }
+        
     }
 
     &__rating-count {
         font-size: .8rem;
         text-transform: uppercase;
+        
+        @include breakpoint(max-width $bp-small) {
+            font-size: .5rem;
+        }
+        
     }
 }
 
@@ -382,7 +443,7 @@
     }
 
     &__friends {
-        
+       display: flex;
     }
 
     &__photo {
@@ -393,7 +454,7 @@
         border: 3px solid #fff;
 
         &:not(:last-child) {
-           margin-right: -1.5rem;
+           margin-right: -2rem;
         }
     }
 }
@@ -407,6 +468,11 @@
     margin-bottom: 3.5rem;
     position: relative;
     overflow: hidden;
+    
+    @include breakpoint(max-width $bp-medium) {
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
 
     &__text {
        margin-bottom: 2rem;
@@ -467,6 +533,10 @@
 .cta {
     padding: 3.5rem 0;
     text-align: center;
+    
+    @include breakpoint(max-width $bp-medium) {
+        padding: 2.5rem 0;
+    }
 
     &__book-now {
         font-size: 1.5rem;

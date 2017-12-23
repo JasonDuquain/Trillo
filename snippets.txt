@@ -70,7 +70,7 @@ last div (.cta) needs to be a sibling of div.detail:
 
 </div>
                  
-                     <div class="cta">
+<div class="cta">
                         <h2 class="cta__book-now">
                             Good news! We have 4 free rooms for your selected dates!
                         </h2>
@@ -78,6 +78,14 @@ last div (.cta) needs to be a sibling of div.detail:
                             <span class="btn__visible">Book now</span>
                             <span class="btn__invisible">Only 4 rooms left</span>
                         </button>
-                    </div>                  
+</div>                  
 
 
+					
+$bp-largest: 75em;     // 1200px
+$bp-large: 68.75em;    // 1100px
+$bp-medium: 56.25em;   // 900px
+$bp-small: 37.5em;     // 600px
+$bp-smallest: 31.25em; // 500px
+					
+					
